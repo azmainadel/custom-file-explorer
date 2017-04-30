@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <SplitPane dividerPositions="0.23577235772357724" layoutX="5.0" layoutY="7.0" prefHeight="686.0" prefWidth="1109.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TreeView fx:id="treeView" onMouseClicked="#expandTree" prefHeight="686.0" prefWidth="257.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="filePath" layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="813.0" />
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="34.0" prefWidth="137.0" text="Go Back" />
+                  <Button fx:id="tilesViewButton" layoutX="690.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#switchToTiles" prefHeight="34.0" prefWidth="137.0" text="Tiles View" />
+                  <Button fx:id="tableViewButton" layoutX="540.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#switchToTable" prefHeight="34.0" prefWidth="137.0" text="Details View" />
+                  <ScrollPane fx:id="tilesScroll" layoutX="14.0" layoutY="110.0" prefHeight="560.0" prefWidth="813.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="806.0">
+                           <children>
+                              <TilePane fx:id="tilesView" layoutX="7.0" layoutY="-8.0" prefHeight="553.0" prefWidth="799.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <TableView fx:id="tableView" layoutX="14.0" layoutY="111.0" prefHeight="560.0" prefWidth="813.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Icon" />
+                      <TableColumn prefWidth="453.0" text="Filename" />
+                        <TableColumn prefWidth="120.0" text="Size" />
+                        <TableColumn prefWidth="164.0" text="Date Modified" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
