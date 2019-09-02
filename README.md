@@ -5,7 +5,7 @@ CSE308 Sessional task based on understanding and implementing design patters. Th
 For this assignment on design patterns, the task was to make a simple File Explorer.
 It has two different styles of viewing files and also has a tree like hierarchy.
 
-===================================================================================================
+===============================================================================================
 Description of Classes
 • Main
 This class controls the stage for the explorer UI. We can change the title
@@ -62,7 +62,7 @@ Functions in this class :
 1. getImageView() : This function gets the icon from the system and
 converts it to an ImageView object, so that we can use it in the UI.
 
-===================================================================================================
+===============================================================================================
 
 Design Patterns
 The design patterns that were used in this project are:
